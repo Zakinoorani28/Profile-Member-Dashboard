@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Member Profile Dashboard</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Project CSS -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="app-root d-flex">
+    <!-- SIDEBAR -->
+    <aside class="sidebar d-flex flex-column align-items-center py-3">
+      <img src="assets/logo.svg" class="logo" alt="logo">
+      <nav class="nav flex-column mt-3 w-100 align-items-center">
+        <a class="nav-link active" title="Contacts"><i class="fa-solid fa-user"></i></a>
+        <a class="nav-link" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a class="nav-link" title="Notes"><i class="fa-solid fa-sticky-note"></i></a>
+        <a class="nav-link" title="Chat"><i class="fa-solid fa-comments"></i></a>
+        <a class="nav-link" title="Calendar"><i class="fa-solid fa-calendar-days"></i></a>
+
+        <div class="sidebar-divider my-3"></div>
+
+        <a class="nav-link" title="Invoices"><i class="fa-solid fa-file-invoice-dollar"></i></a>
+        <a class="nav-link" title="Settings"><i class="fa-solid fa-gear"></i></a>
+      </nav>
+
+      <div class="sidebar-bottom mt-auto mb-3">
+        <button class="btn btn-sm btn-ghost" title="Help"><i class="fa-solid fa-question"></i></button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main flex-grow-1">
+      <!-- TOPBAR -->
+      <header class="topbar d-flex align-items-center justify-content-between px-4 py-2">
+        <div class="d-flex align-items-center gap-3">
+          <div class="search-box d-flex align-items-center">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="form-control form-control-sm ms-2" placeholder="Search contact" aria-label="Search">
+          </div>
+          <div class="top-icons d-flex gap-2 align-items-center">
+            <button class="btn btn-sm btn-ghost"><i class="fa-solid fa-bell"></i></button>
+            <button class="btn btn-sm btn-ghost"><i class="fa-solid fa-moon"></i></button>
+            <button class="btn btn-sm btn-ghost"><i class="fa-solid fa-th-large"></i></button>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <div class="text-end me-2 d-none d-md-block">
+            <div class="fw-semibold">Savannah Nguyen</div>
+            <div class="text-muted small">Admin</div>
+          </div>
+          <img src="assets/profile.svg" class="avatar" alt="avatar">
+        </div>
+      </header>
+
+      <!-- PAGE BODY -->
+      <div class="container-fluid content px-4 py-4">
+        <div class="row gx-4">
+          <!-- LEFT COLUMN -->
+          <div class="col-xl-3 col-lg-4">
+            <div class="card profile-card mb-3">
+              <div class="card-body text-center">
+                <div class="profile-image-wrap mx-auto mb-3">
+                  <img src="assets/profile.svg" class="profile-img" alt="profile">
+                </div>
+                <h4 class="mb-0">Max Hollaway</h4>
+                <div class="text-muted small mb-3">Member</div>
+
+                <div class="w-100 mb-3">
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-sm">Quick Actions <i
+                        class="fa-solid fa-caret-down ms-1"></i></button>
+                  </div>
+                </div>
+
+                <div class="action-buttons d-grid gap-2">
+                  <button class="btn btn-outline-light btn-sm">Add Credit</button>
+                  <button class="btn btn-outline-light btn-sm">Create Workout</button>
+                  <button class="btn btn-outline-light btn-sm">Show Fitness</button>
+                  <button class="btn btn-outline-light btn-sm">Bar Code Print</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card personal-info mb-3">
+              <div class="card-body">
+                <h6 class="card-title mb-3">Personal Info</h6>
+                <ul class="info-list list-unstyled small mb-3">
+                  <li><span class="label">Pronunciation</span><span class="value">—</span></li>
+                  <li><span class="label">Using Student App</span><span class="value">No</span></li>
+                  <li><span class="label">Mobile Phone</span><span class="value">(473) 555-0927</span></li>
+                  <li><span class="label">Email</span><span class="value">izzy@gmail.com</span></li>
+                </ul>
+
+                <h6 class="mb-2">Tags</h6>
+                <div class="tags d-flex flex-wrap gap-2">
+                  <span class="badge tag">benefits-focused</span>
+                  <span class="badge tag">student</span>
+                  <span class="badge tag">training</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="col-xl-9 col-lg-8">
+            <div class="card mb-3 top-tabs-card">
+              <div class="card-body p-3">
+                <ul class="nav nav-tabs align-items-center">
+                  <li class="nav-item"><a class="nav-link">Profile</a></li>
+                  <li class="nav-item"><a class="nav-link">Notes</a></li>
+                  <li class="nav-item"><a class="nav-link">Communication</a></li>
+                  <li class="nav-item"><a class="nav-link">Workouts</a></li>
+                  <li class="nav-item"><a class="nav-link">Attendance</a></li>
+                  <li class="nav-item"><a class="nav-link active">Invoice</a></li>
+                  <li class="nav-item"><a class="nav-link">Ranks</a></li>
+                </ul>
+
+                <!-- Metrics row -->
+                <div class="row mt-3 g-3">
+                  <div class="col-sm-6 col-md-3">
+                    <div class="metric-card p-3 h-100">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <div class="small text-muted">Email Sent</div>
+                          <div class="h4 mb-0">6</div>
+                          <div class="small text-muted">Last 60 days</div>
+                        </div>
+                        <div class="metric-icon-wrap">
+                          <i class="fa-solid fa-envelope"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3">
+                    <div class="metric-card p-3 h-100">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <div class="small text-muted">Appointment Booked</div>
+                          <div class="h4 mb-0">0</div>
+                          <div class="small text-muted">Showned: 0</div>
+                        </div>
+                        <div class="metric-icon-wrap">
+                          <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3">
+                    <div class="metric-card p-3 h-100">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <div class="small text-muted">Total Attendance</div>
+                          <div class="h4 mb-0">81</div>
+                          <div class="small text-muted">Last 30 days: 21</div>
+                        </div>
+                        <div class="metric-icon-wrap">
+                          <i class="fa-solid fa-people-group"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3">
+                    <div class="metric-card p-3 h-100">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <div class="small text-muted">Tasks</div>
+                          <div class="h4 mb-0">3</div>
+                          <div class="small text-muted">Completed: 3</div>
+                        </div>
+                        <div class="metric-icon-wrap">
+                          <i class="fa-solid fa-list-check"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Invoices card -->
+            <div class="card invoices-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="mb-0">Invoices / Payments <small class="text-muted ms-2">45 invoices</small></h5>
+                  <div>
+                    <button class="btn btn-sm btn-outline-light me-2"><i class="fa-solid fa-filter"></i>
+                      Actions</button>
+                    <button class="btn btn-sm btn-primary">Print Payments</button>
+                  </div>
+                </div>
+
+                <div class="table-responsive invoices-table-wrap">
+                  <table class="table table-borderless align-middle mb-0">
+                    <thead>
+                      <tr class="text-muted small">
+                        <th style="width:180px">Date</th>
+                        <th>Invoice Summary</th>
+                        <th style="width:120px">Amount Paid</th>
+                        <th style="width:120px">Amount Owed</th>
+                        <th style="width:80px">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>12/17/2024<br><small class="text-muted">11:55am</small></td>
+                        <td>
+                          <div class="small">Qty:1, Sparring Gloves<br>Qty:1, Black Hyper T-Shirt(Small)-Size:
+                            Small<br>Qty:1, Century Mouth Guard, White</div>
+                          <div class="mt-2 small text-muted">Payments: CC Terminal 12/17/2024 - Amt: $125.68</div>
+                        </td>
+                        <td>$125.68</td>
+                        <td>$0.00</td>
+                        <td><a href="#" class="link-primary">View</a></td>
+                      </tr>
+
+                      <tr>
+                        <td>12/12/2024<br><small class="text-muted">04:05am</small></td>
+                        <td>
+                          <div class="small">Qty:1, Black Hyper T-Shirt (Small) - Size - Small<br>No payments found.
+                          </div>
+                        </td>
+                        <td>$0.00</td>
+                        <td>$21.67</td>
+                        <td><a href="#" class="link-primary">View</a></td>
+                      </tr>
+
+                      <tr>
+                        <td>12/10/2024<br><small class="text-muted">05:47am</small></td>
+                        <td>
+                          <div class="small">Qty:1, Century Mouth Guard, Black<br>Qty:1, Black Hyper T-Shirt (Small) -
+                            Size - Small</div>
+                        </td>
+                        <td>$131.11</td>
+                        <td>$0.00</td>
+                        <td><a href="#" class="link-primary">View</a></td>
+                      </tr>
+
+                      <tr>
+                        <td>12/02/2024<br><small class="text-muted">07:25am</small></td>
+                        <td>
+                          <div class="small">Qty:1, Membership Down Payment</div>
+                        </td>
+                        <td>$178.76</td>
+                        <td>$0.00</td>
+                        <td><a href="#" class="link-primary">View</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="d-flex justify-content-end mt-3 small text-muted">Total Paid: $2772.28 — Total Owed: $21.67
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
