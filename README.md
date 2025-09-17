@@ -27,5 +27,5 @@ This project is a recreation of the **Martial Arts Member Profile Dashboard** as
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/member-dashboard.git
+   git clone https://github.com/Zakinoorani28/Profile-Member-Dashboard.git
    ```
