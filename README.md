@@ -2,6 +2,10 @@
 
 This project is a recreation of the **Martial Arts Member Profile Dashboard** as part of the Front-End Developer hiring task for **Techelix**. It was built using **HTML, CSS, Bootstrap 5, and Bootstrap Icons**, with a focus on responsive design, clean code, and attention to UI detail.
 
+![Dashboard Preview](assets/screenshot.png)
+
+---
+
 ## 🚀 Live Preview
 
 - **Vercel Deployment:** [https://profile-member-dashboard.vercel.app/](#)
