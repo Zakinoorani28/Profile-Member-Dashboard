@@ -1,7 +1,7 @@
 :root {
   --bg: #0d1115;
   --panel: #111318;
-  --muted: #9aa3ad;
+  --muted: #fff !important;
   --accent-blue: #1f6fff;
   --card-border: rgba(255, 255, 255, 0.02);
   --glass: rgba(255, 255, 255, 0.01);
@@ -34,7 +34,7 @@ body {
 
 .sidebar {
   width: 78px;
-  background: #081018;
+  background: #1F2124;
   border-right: 1px solid var(--card-border);
   min-height: 100vh;
   position: fixed;
@@ -47,7 +47,8 @@ body {
 }
 
 .brand-logo {
-  width: 36px;
+  width: 47px;
+  height: 60px;
   display: block;
   margin: 4px auto
 }
@@ -63,14 +64,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
+  color: #fff;
   margin: 6px auto;
   background: transparent;
   border: 0
 }
 
 .side-item i {
-  font-size: 18px
+  font-size: 18px;
+  color: #fff;
 }
 
 .side-item:hover {
@@ -120,24 +122,29 @@ body {
 }
 
 .search-wrap {
-  background: #0b1216;
+  background: #21222D;
   padding: 8px 12px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   min-width: 360px;
-  color: var(--muted)
+  color: #fff
 }
 
 .search-wrap i {
-  color: var(--muted)
+  color: #fff;
 }
 
 .search-wrap input {
   background: transparent;
   border: 0;
-  color: var(--muted);
+  color: #fff;
   outline: 0
+}
+
+.search-wrap input::placeholder {
+  color: #ffffff;
+  opacity: 1;
 }
 
 /* top icons */
@@ -145,7 +152,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: #0b1216;
+  background: #21222D;
   border: 0;
   color: var(--muted);
   display: inline-flex;
@@ -159,27 +166,27 @@ body {
 
 /* content */
 .content {
-  max-width: 1180px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding-top: 12px
+  padding-top: 12px;
 }
 
 /* cards */
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
+  background: #21222D;
   border: 1px solid var(--card-border);
   border-radius: 12px
 }
 
 .profile-panel .profile-photo-wrap {
-  background: linear-gradient(180deg, #0b1014, #0b0f12);
+  background: #21222D;
   padding: 18px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.02)
 }
 
 .profile-photo {
   width: 100%;
-  height: 220px;
+  height: 350px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
@@ -203,7 +210,8 @@ body {
 
 /* profile body */
 .profile-panel .card-body {
-  padding: 18px
+  padding: 10px;
+  color: #fff;
 }
 
 .btn-quick {
@@ -216,16 +224,18 @@ body {
 }
 
 /* action buttons grid */
-.action-grid .btn-dark-outline {
+.btn-dark-outline {
   background: #0b1216;
-  border: 1px solid rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   color: #bfdfff;
   text-align: left;
   padding: 12px;
   border-radius: 10px;
+  font-size: 13px;
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 8px;
+  height: 100%;
 }
 
 /* dividers & hr */
@@ -237,28 +247,43 @@ body {
 }
 
 /* personal info */
+.personal-info ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .personal-info .label {
-  color: var(--muted);
-  display: inline-block;
-  width: 55%
+  color: #9ba3b4;
+  font-size: 13px;
 }
 
 .personal-info .val {
-  float: right;
-  color: #dff0ff
+  color: #dff0ff;
+  font-size: 13px;
 }
 
 .personal-info .val.blue {
-  color: #4ea1ff
+  color: #4ea1ff;
+  cursor: pointer;
 }
 
-/* tags */
+/* Tags */
 .tags .tag {
-  background: rgba(255, 255, 255, 0.02);
-  padding: 8px 12px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 10px;
+  border-radius: 10px;
   color: #cfeeff;
-  font-size: 13px
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tags .tag i {
+  font-size: 0.85rem;
+  color: #6bb8ff;
 }
 
 /* tabs card */
@@ -275,22 +300,25 @@ body {
   border-radius: 0
 }
 
-/* metric */
+/* Metric cards */
 .metric {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.02);
-  min-height: 96px
+  background-image: url('/assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 110px;
 }
 
+
 .metric small {
-  color: var(--muted)
+  color: #000;
 }
 
 .metric-icon {
-  font-size: 20px;
-  color: #4fb3ff;
-  opacity: 0.95
+  font-size: 22px;
+  color: #000;
 }
 
 /* invoices */
@@ -328,29 +356,69 @@ body {
 
 /* footer totals */
 .invoices-card .text-muted {
-  color: var(--muted) !important
+  color: #fff !important
 }
 
-/* responsive */
+/* Pagination Base */
+.pagination {
+  gap: 6px;
+  /* spacing between items */
+}
+
+.pagination .page-link {
+  background: #1c1f24;
+  /* dark gray background */
+  border: none;
+  border-radius: 6px;
+  color: #9aa7b2;
+  font-weight: 500;
+  padding: 6px 12px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.pagination .page-item.disabled .page-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination .page-item.active .page-link {
+  background: #3db0ff;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.pagination .page-link:hover {
+  background: #2a2f35;
+  color: #fff;
+}
+
 @media (max-width: 992px) {
   .sidebar {
-    display: none
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay.active {
+    display: block;
   }
 
   .main {
-    margin-left: 0
+    margin-left: 0;
+    width: 100%;
   }
 
   .content {
-    padding: 0 12px
+    padding: 0 12px;
+    max-width: 100%;
   }
 
   .search-wrap {
-    min-width: 140px
-  }
-
-  .profile-photo {
-    height: 180px
+    min-width: 180px;
   }
 }
 
